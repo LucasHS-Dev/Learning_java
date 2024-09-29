@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner leia = new Scanner(System.in);
+
+        int tamanhoArray = 2;
+        int[] numeros = new int[tamanhoArray];
+
+        System.out.println("Escolha qual operação deseja realizar \n1 soma \n2 subitração \n3 multiplicação \n4 divisão");
+        int op = leia.nextInt();
+
+
+        for(int n = 0; n < tamanhoArray; n++){
+            System.out.println("Insira o numero desejado: ");
+            numeros[n] = leia.nextInt();
+        }
+        switch (op){
+            case 1:
+                System.out.println(numeros[0]+" + "+numeros[1]+" = "+(numeros[0]+numeros[1]));
+                break;
+            case 2:
+                System.out.println(numeros[0]+" - "+numeros[1]+" = "+(numeros[0]-numeros[1]));
+                break;
+            case 3:
+                System.out.println(numeros[0]+" * "+numeros[1]+" = "+(numeros[0]*numeros[1]));
+                break;
+            case 4:
+                System.out.println(numeros[0]+" / "+numeros[1]+" = "+(numeros[0]/numeros[1]));
+                break;
+        }
+    }
+}
